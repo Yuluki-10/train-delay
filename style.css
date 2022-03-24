@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    margin: 20px 0;
+}
+
+table{
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+table ,th,td{
+    border: 2px solid rgb(104, 104, 104);
+}
+
+table th{
+    background-color: rgb(104, 104, 104);
+    color: #fff;
+    text-align: center;
+}
+
+th, td{
+    padding: 16px 8px;
+}
+
+table#train-list tbody tr:nth-child(odd){
+    background-color: #fff;
+}
+table#train-list tbody tr:nth-child(even){
+    background-color: #eee;
+}
