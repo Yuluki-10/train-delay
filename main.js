@@ -18,19 +18,14 @@ function getTrainList() {
                 const localTime = utctime.toLocaleDateString("ja-JP", options);
 
                 drawRowCell(i, train, company, localTime);
-                //表形式で遅延路線を表示する
-                // const row = document.getElementById('train-list').insertRow(i+1);// theadに追加されないよう+1する（=2行目〜追加される
-                // row.insertCell().textContent = company;
-                // row.insertCell().textContent = train;
-                // row.insertCell().textContent = localTime;
             }
         });
 }
 
-function drawRowCell(i, t, c, l) {
+function drawRowCell(i, train, company, localTime) {
     //表形式で遅延路線を表示する
     const row = document.getElementById("train-list").insertRow(i + 1); // theadに追加されないよう+1する（=2行目〜追加される
-    row.insertCell().textContent = c;
-    row.insertCell().textContent = t;
-    row.insertCell().textContent = l;
+    row.insertCell().textContent = company;
+    row.insertCell().textContent = train;
+    row.insertCell().textContent = localTime;
 }
